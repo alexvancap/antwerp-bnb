@@ -1,0 +1,12 @@
+@import "./../../../../theme/theme";
+
+.footer {
+  height: 45px;
+}
+.footerText {
+  width: 300px;
+  line-height: 45px;
+  color: $secondary;
+  margin: 0 auto;
+  font-family: $core-font;
+}

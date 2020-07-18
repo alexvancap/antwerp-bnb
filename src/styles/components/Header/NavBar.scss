@@ -1,0 +1,20 @@
+@import "./../../../../theme/theme";
+
+#NavBar {
+  position: absolute;
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  height: 90px;
+
+
+  font-family: $logo-font;
+  font-size: 24px;
+  font-weight: bold;
+  color: $on-secondary;
+  text-transform: uppercase;
+
+  background: $primary;
+}

@@ -1,0 +1,27 @@
+@import "./../../../../theme/theme";
+
+.NavButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: $secondary;
+
+  height: 100%;
+  min-width: 120px;
+
+  cursor: pointer;
+
+  .Label {
+    font-size: 25px;
+    text-transform: capitalize;
+  }
+}
+
+.active {
+  color: $secondary-light;
+}
+
+.NavButton:hover {
+  background-color: $on-primary-light;
+}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nimport Layout from \"../components/Layout\";\n\nconst ProfileView = props => __jsx(Layout, null, `Profile View`);\n\nexport default ProfileView;","map":null,"metadata":{},"sourceType":"module"}

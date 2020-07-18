@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nimport Layout from \"../components/Layout\";\n\nconst MyCartView = props => __jsx(Layout, null, `My Cart View`);\n\nexport default MyCartView;","map":null,"metadata":{},"sourceType":"module"}
