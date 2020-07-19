@@ -1,9 +1,17 @@
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 import './../styles/components/Slider.scss';
 
-const Slider = () => {
+const Slider = (images) => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch({type: 'SAVE_INDEX_SLIDER_IMAGES', images: images})
+  }, [])
+
   return (
     <div className='slider'>
       <img alt='main image' className='sliderImg' src='https://a0.muscache.com/im/pictures/79b2200c-5797-435d-9ac2-3007b6f50c80.jpg?aki_policy=large'/>

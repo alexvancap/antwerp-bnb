@@ -2,13 +2,11 @@ import Layout from './../components/Layout'
 import './../../theme/_basic.scss'
 function Error({ statusCode }) {
   return (
-    <Layout>
-      <p className='center'>
-        {statusCode
-          ? `An error ${statusCode} occurred on server`
-          : 'An error occurred on the client'}
-      </p>
-    </Layout>
+    <p className='center'>
+      {statusCode
+        ? `An error ${statusCode} occurred on server`
+        : 'An error occurred on the client'}
+    </p>
   )
 };
 

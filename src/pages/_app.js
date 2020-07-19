@@ -1,9 +1,11 @@
 import React from 'react';
-import {wrapper} from './../store';
-
+import Layout from "../components/Layout";
+import { wrapper } from './../store';
 
 const MyApp = ({Component, pageProps}) => (
-    <Component {...pageProps} />
+    <Layout>
+        <Component {...pageProps} />
+    </Layout>
 );
 
 export default wrapper.withRedux(MyApp);

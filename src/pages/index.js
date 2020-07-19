@@ -1,13 +1,10 @@
-import Layout from "../components/Layout";
-
 import Slider from '../components/Slider';
+import sliderConfig from "./../../config/IndexSlider.config";
 
 import './../styles/pages/index/index.scss';
 
 const Index = () => (
-  <Layout>
-      <Slider />
-  </Layout>
+  <Slider images={sliderConfig} />
 );
 
 export default Index;
