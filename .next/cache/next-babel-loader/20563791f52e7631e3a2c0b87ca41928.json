@@ -1,1 +1,0 @@
-{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nimport Layout from \"../components/Layout\";\n\nvar ExploreView = function ExploreView(props) {\n  return __jsx(Layout, null, \"Explore View.\");\n};\n\nexport default ExploreView;","map":null,"metadata":{},"sourceType":"module"}
