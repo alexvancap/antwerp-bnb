@@ -7,14 +7,18 @@ import './../styles/components/Slider.scss';
 
 const Slider = (images) => {
   const dispatch = useDispatch();
+  const state = useSelector(state => state)
+  console.log(state)
 
   useEffect(() => {
+
     dispatch({type: 'SAVE_INDEX_SLIDER_IMAGES', images: images})
+    
   }, [])
 
   return (
     <div className='slider'>
-      <img alt='main image' className='sliderImg' src='https://a0.muscache.com/im/pictures/79b2200c-5797-435d-9ac2-3007b6f50c80.jpg?aki_policy=large'/>
+      <img alt='main image' className='sliderImg' src=''/>
       <div className='sliderButton left'>
         <FontAwesomeIcon className='Icon' icon={faAngleLeft} />
       </div>

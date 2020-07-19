@@ -1,20 +1,19 @@
 import { HYDRATE } from 'next-redux-wrapper';
 
 const initialState = {
-  images: [],
-  currentSlide: 0
+  currentImage: {
+    path: ''
+  },
 }
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case HYDRATE:
       return {...state, ...action.payload};
-    case 'SAVE_INDEX_SLIDER_IMAGES':
+    case 'COMP_SLIDER_UPDATE_CURR_IMG':
       return {
-        ...state, 
-        currentSlide: {
-          ...action.images
-        }
+        ...state,
+        currentImage: action.image
       }
     default:
       return state;
