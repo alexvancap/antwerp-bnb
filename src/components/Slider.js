@@ -3,8 +3,6 @@ import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 import './../styles/components/Slider.scss';
 
-
-
 const Slider = () => {
   return (
     <div className='slider'>
