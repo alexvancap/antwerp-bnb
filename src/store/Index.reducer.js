@@ -2,7 +2,8 @@ import { HYDRATE } from 'next-redux-wrapper';
 
 const initialState = {
   images: [],
-  currentSlide: 0
+  currentSlide: 0,
+  currentImage: {},
 }
 
 const reducer = (state = initialState, action) => {
@@ -15,6 +16,11 @@ const reducer = (state = initialState, action) => {
         currentSlide: {
           ...action.images
         }
+      }
+    case 'SLIDER_UPDATE_CURR_IMG': 
+      return {
+        ...state,
+        currentImage: action.image
       }
     default:
       return state;

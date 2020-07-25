@@ -2,19 +2,14 @@ import { useMemo } from 'react';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-import indexReducer from './index.reducer';
 import sliderReducer from './components/slider.reducer';
 
 let store
 
 
-
 function initStore(preloadedState) {
   return createStore(
-    combineReducers({
-      indexReducer: indexReducer,
-      sliderReducer: sliderReducer
-    }),
+    sliderReducer,
     preloadedState,
     composeWithDevTools(applyMiddleware())
   )
