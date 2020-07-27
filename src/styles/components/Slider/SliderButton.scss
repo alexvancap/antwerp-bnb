@@ -1,0 +1,33 @@
+@import '../../../../theme/theme.scss';
+
+.sliderButton {
+  z-index: 3;
+  background-color: $secondary;
+  position: absolute;
+  cursor: pointer;
+}
+
+.sliderButton.moveLeft {
+  animation: moveLeft ease 0.5s;
+  -webkit-animation: moveLeft ease 0.5s;
+  -moz-animation: moveLeft ease 0.5s;
+}
+
+.sliderButton:hover {
+  background-color: $secondary-light;
+}
+
+.sliderButton.disabled {
+  background-color: $secondary-light;
+}
+
+.left {
+  padding-left: 0.5%;
+  padding-right: 1%;
+}
+
+.right {
+  padding-left: 1%;
+  padding-right: 0.5%;
+  right: 0px;
+}

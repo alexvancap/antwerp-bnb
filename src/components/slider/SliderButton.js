@@ -1,17 +1,18 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import './../../styles/components/Slider/SliderButton.scss';
 
 const SliderButton = function(props) {
   const dispatch = useDispatch();
   const isDisabled = useSelector(state => state.disabled);
+  const currentIndex = useSelector(state => state.currentIndex);
 
-  function handleButtonClick(type) {
-    if(!isDisabled){
-      dispatch({type: 'SLIDER_HANDLE_DISABLE'});
-      props.handleImgChange(type)
-    }
+  const handleButtonClick = (type) => {
+    if(!isDisabled)
+      props.handleImgChange(currentIndex + type)
   }
+
   return (
     <div 
       onClick={() => handleButtonClick(props.direction === 'left' ? -1 : 1)}

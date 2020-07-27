@@ -17,7 +17,7 @@ const reducer = (state = initialState, action) => {
     case 'SLIDER_HANDLE_DISABLE':
       return {
         ...state,
-        disabled: !state.disabled
+        disabled: action.value
       }
     default:
       return state;
