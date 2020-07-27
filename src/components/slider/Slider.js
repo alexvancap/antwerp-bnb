@@ -1,15 +1,15 @@
 import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch, useSelector } from 'react-redux';
 import rmClassName from '../../helperFunctions/rmClassName';
-
 import './../../styles/components/slider/slider.scss';
+import SliderButton from './SliderButton';
+
 
 const Slider = (props) => {
 
   const dispatch = useDispatch();
   const currentImg = useSelector(state => state.currentImg);
+  const isDisabled = useSelector(state => state.disabled);
 
   useEffect(() => {
     const firstImage = document.getElementById('slider-img-0');
@@ -18,7 +18,7 @@ const Slider = (props) => {
     dispatch({type: 'SLIDER_UPDATE_CURR_IMG', image: props.images[0]});
   }, [])
 
-  const handleImgChange = function(type) {
+  const handleImgChange = function(type, e) {
     const currIndex = props.images.indexOf(currentImg);
     let nextIndex = currIndex + type;
 
@@ -45,6 +45,7 @@ const Slider = (props) => {
         rmClassName(currentEl, 'fadeOut');
         rmClassName(nextEl, 'fadeIn');
         currentEl.style.zIndex = 0;
+        dispatch({type: 'SLIDER_HANDLE_DISABLE'});
     }, 1000)
   }
 
@@ -64,18 +65,8 @@ const Slider = (props) => {
             )
           }
         </div>
-        <div 
-          onClick={() => handleImgChange(-1)}
-          className='sliderButton left'
-        >
-          <FontAwesomeIcon className='Icon noselect' icon={faAngleLeft} />
-        </div>
-        <div 
-          onClick={() => handleImgChange(1)}
-          className='sliderButton right'
-        >
-          <FontAwesomeIcon className='Icon noselect' icon={faAngleRight} />
-        </div>
+        <SliderButton direction='left' handleImgChange={handleImgChange} />
+        <SliderButton direction='right' handleImgChange={handleImgChange} />
       </div>
     )
   else

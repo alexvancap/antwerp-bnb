@@ -7,7 +7,6 @@
   position: relative;
   height: 100%;
   width: 100%;
-  overflow: hidden;
 }
 
 .sliderButton {
@@ -17,7 +16,17 @@
   cursor: pointer;
 }
 
+.sliderButton.moveLeft {
+  animation: moveLeft ease 0.5s;
+  -webkit-animation: moveLeft ease 0.5s;
+  -moz-animation: moveLeft ease 0.5s;
+}
+
 .sliderButton:hover {
+  background-color: $secondary-light;
+}
+
+.sliderButton.disabled {
   background-color: $secondary-light;
 }
 
@@ -28,6 +37,8 @@
 }
 
 .sliderImg { 
+  height: 100%;
+  width: 100%;
   position: absolute;
   animation-name: sliderImg;
   object-fit: cover;

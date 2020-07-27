@@ -3,9 +3,9 @@ import { HYDRATE } from 'next-redux-wrapper';
 const initialState = {
   images: [],
   currentImg: {
-    index: 0,
     path: ''
-  }
+  },
+  disabled: false
 }
 
 const reducer = (state = initialState, action) => {
@@ -23,6 +23,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         currentImg: action.image ?? state.images[0]
+      }
+    case 'SLIDER_HANDLE_DISABLE':
+      return {
+        ...state,
+        disabled: !state.disabled
       }
     default:
       return state;
