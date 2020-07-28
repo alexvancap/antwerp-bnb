@@ -5,7 +5,7 @@ const Indicator = (props) => {
   const currentIndex = useSelector(state => state.currentIndex);
   const isDisabled = useSelector(state => state.disabled);
 
-  const checkIfActive = (index) => index === currentIndex ? 'active' : 'unactive'
+  const checkIfActive = (index) => index === currentIndex ? 'active' : 'inactive'
 
   const checkIfDisabled = () => isDisabled ? 'disabled' : ''
 

@@ -13,8 +13,8 @@ export default function App({ Component, pageProps }) {
     <Provider store={store}>
         <Layout>
             <Component {...pageProps} />
+            <Footer navButtons={navButtons} />
         </Layout>
-        <Footer navButtons={navButtons} />
     </Provider>
   )
 }

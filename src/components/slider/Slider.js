@@ -23,7 +23,7 @@ const Slider = (props) => {
     const nextImgInterval = setInterval(() => {
       if(!isDisabled)
         handleImgChange(currentIndex + 1)
-    }, 3000)
+    }, 5000)
     return () => {
       clearInterval(nextImgInterval)
     }
