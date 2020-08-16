@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
-import './../../styles/components/Slider/Indicator.scss'
+import './../../../styles/components/Slider/Indicator.scss'
 
 const Indicator = (props) => {
-  const currentIndex = useSelector(state => state.currentIndex);
-  const isDisabled = useSelector(state => state.disabled);
+  const currentIndex = useSelector(state => state.slider.currentIndex);
+  const isDisabled = useSelector(state => state.slider.disabled);
 
   const checkIfActive = (index) => index === currentIndex ? 'active' : 'inactive'
 

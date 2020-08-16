@@ -10,12 +10,10 @@
 
   position: absolute;
 
-
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 
   overflow: hidden;
- 
 }
 
 #background {
@@ -35,7 +33,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-
 }
 
 .dot {
@@ -53,9 +50,9 @@
 }
 
 .dot.inactive {
-    animation: fadeInDot ease 1s;
-    -webkit-animation: fadeInDot ease 1s;
-    -moz-animation: fadeInDot ease 1s;
+  animation: fadeInDot ease 1s;
+  -webkit-animation: fadeInDot ease 1s;
+  -moz-animation: fadeInDot ease 1s;
 }
 
 .dot.active {

@@ -4,8 +4,8 @@ import './../../theme/_basic.scss'
 export default () => {
   return (
     <div className='center'>
-      <h1>ERROR 404 &nbsp;</h1>
-      <h1>The page youy were looking for was not found! :(</h1>
+      <h2>ERROR 404 &nbsp;</h2>
+      <h2>The page youy were looking for was not found! :(</h2>
     </div>
   )
 }

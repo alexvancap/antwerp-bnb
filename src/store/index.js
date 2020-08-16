@@ -3,13 +3,16 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import sliderReducer from './components/slider.reducer';
+import bookReducer from './book.reducer';
 
 let store
 
 
 function initStore(preloadedState) {
   return createStore(
-    sliderReducer,
+    combineReducers({slider: sliderReducer,
+      book: bookReducer,}),
+    
     preloadedState,
     composeWithDevTools(applyMiddleware())
   )

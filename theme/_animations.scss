@@ -27,3 +27,9 @@
   0%    { margin-left: 0; }
   100%  { margin-left: -50px; }
 }
+
+@keyframes disableScrollArrow {
+  0%    { color: $secondary-light}
+  50%   { color: $secondary-dark}
+  100%  { color: $secondary-light}
+}

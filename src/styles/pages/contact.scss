@@ -1,0 +1,21 @@
+@import './../../../theme/theme';
+
+#contact-container {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row;
+}
+
+#contact-form {
+  width: 50%;
+  height: 90vh;
+}
+
+#contact-info {
+  width: 50%;
+  height: 90vh;
+}
+
+.contact-label {
+  color: $secondary;
+}

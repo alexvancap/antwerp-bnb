@@ -7,18 +7,18 @@
   cursor: pointer;
 }
 
-.sliderButton.moveLeft {
-  animation: moveLeft ease 0.5s;
-  -webkit-animation: moveLeft ease 0.5s;
-  -moz-animation: moveLeft ease 0.5s;
-}
-
 .sliderButton:hover {
   background-color: $secondary-light;
 }
 
 .sliderButton.disabled {
   background-color: $secondary-light;
+}
+
+.Icon {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-size: 3.4em;
 }
 
 .left {

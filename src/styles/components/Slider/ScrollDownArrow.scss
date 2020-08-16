@@ -1,0 +1,24 @@
+@import "./../../../../theme/theme";
+#scrollDown {
+  position: absolute;
+  height: 15vh;
+  width: 15vh;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: $secondary-light;
+  opacity: 0.7;
+  z-index: 3;
+}
+
+#scrollDown:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+#scrollDown.disabled { 
+  animation: disableScrollArrow ease .5s;
+  -webkit-animation: disableScrollArrow ease .5s;
+  -moz-animation: disableScrollArrow ease .5s;
+}
